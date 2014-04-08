@@ -1,0 +1,20 @@
+<h1>Listing posts</h1>
+<%= link_to 'New Post', new_post_path, remote: true, :id => "new-post" %>
+<div id="new-post-form"></div>
+<table class="table" id='post-row'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody id="posts">
+    <%= render 'index' %>
+  </tbody>
+</table>
+
+
