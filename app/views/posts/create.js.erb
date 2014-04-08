@@ -1,3 +1,4 @@
 $("#new_post").remove();	
 $("#new-post").show();
-$('#post-row').append('<tr>rachel!!!!!!!!!</tr>');
+$('#post-table:last-child').append('<%= j render @post %>');
+

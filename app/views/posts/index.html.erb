@@ -1,7 +1,7 @@
 <h1>Listing posts</h1>
 <%= link_to 'New Post', new_post_path, remote: true, :id => "new-post" %>
 <div id="new-post-form"></div>
-<table class="table" id='post-row'>
+<table class="table" id='post-table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -13,7 +13,10 @@
   </thead>
 
   <tbody id="posts">
-    <%= render 'index' %>
+    <% @posts.each do |post| %>
+    <%= render 'post', :post => post %>
+    <% end %>
+    
   </tbody>
 </table>
 
